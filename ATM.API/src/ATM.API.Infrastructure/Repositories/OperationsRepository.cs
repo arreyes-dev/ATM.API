@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace ATM.API.Infrastructure.Repositories
 {
-    internal class OperationsRepository: IOperationsRepository
+    public class OperationsRepository: IOperationsRepository
     {
-
+        public string GetCustomerData(int idCustomer) {
+            return "UserTest";
+        }
     }
 }

@@ -11,21 +11,24 @@ namespace ATM.API.Web.Controllers
         private readonly ILogger<ATMController> _logger;
         private readonly IOperationsService _operationsService;
 
-        public ATMController(ILogger<ATMController> logger)
+        public ATMController(ILogger<ATMController> logger, IOperationsService operationsService)
         {
             _logger = logger;
+            _operationsService = operationsService ?? throw new ArgumentNullException(nameof(operationsService));
         }
 
         [HttpPost("Withdraw")]
-        public  ATMResponse WithdrawCash(decimal amount)
+        public IActionResult WithdrawCash(decimal amount)
         {
-            return _operationsService.WithdrawCash(amount);
+            var result = _operationsService.WithdrawCash(amount);
+            return Ok(result);
         }
 
         [HttpPost("Deposit")]
-        public ATMResponse DepositCash(decimal amount)
+        public IActionResult DepositCash(decimal amount)
         {
-            return _operationsService.DepositCash(amount); 
+            var result = _operationsService.DepositCash(amount);
+            return Ok(result);
         }
     }
 

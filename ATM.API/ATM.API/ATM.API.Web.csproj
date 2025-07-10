@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ATM.API.Application\ATM.API.Application.csproj" />
     <ProjectReference Include="..\src\ATM.API.Domain\ATM.API.Domain.csproj" />
+    <ProjectReference Include="..\src\ATM.API.Infrastructure\ATM.API.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,6 @@ namespace ATM.API.Infrastructure.Interface
 {
     public interface IOperationsRepository
     {
-
+        string GetCustomerData(int idCustomer);
     }
 }

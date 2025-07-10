@@ -1,5 +1,6 @@
 ﻿using ATM.API.Application.Interfaces;
 using ATM.API.Domain.ATM;
+using ATM.API.Infrastructure.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,18 @@ namespace ATM.API.Application.Services
 {
     public class OperationsService : IOperationsService
     {
+
+        private readonly IOperationsRepository _operationsRepository;
+        public OperationsService(IOperationsRepository operationsRepository)
+        {
+            _operationsRepository = operationsRepository;
+        }
+
         public ATMResponse WithdrawCash(decimal amount) {
-            return new ATMResponse(); 
+            return new ATMResponse()
+            {
+                Message = _operationsRepository.GetCustomerData(1)
+            }; 
         }
 
         public ATMResponse DepositCash(decimal amount) { 
