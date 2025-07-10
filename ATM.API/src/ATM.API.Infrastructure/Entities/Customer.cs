@@ -12,7 +12,7 @@ namespace ATM.API.Infrastructure.Entities
         public string DNI { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public List<BankAccount> Accounts { get; set; } = new List<BankAccount>();
+        public ICollection<BankAccount> BankAccounts { get; set; }
     }
 
 }

@@ -1,7 +1,9 @@
 using ATM.API.Application.Interfaces;
 using ATM.API.Application.Services;
+using ATM.API.Infrastructure.Contexts;
 using ATM.API.Infrastructure.Interface;
 using ATM.API.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IOperationsService, OperationsService>();
 builder.Services.AddScoped<IOperationsRepository, OperationsRepository>();
+builder.Services.AddDbContext<BankingDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BankingDbConnection")));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

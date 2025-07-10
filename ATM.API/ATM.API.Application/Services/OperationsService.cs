@@ -18,10 +18,10 @@ namespace ATM.API.Application.Services
             _operationsRepository = operationsRepository;
         }
 
-        public ATMResponse WithdrawCash(decimal amount) {
+        public async Task<ATMResponse > WithdrawCash(decimal amount) {
             return new ATMResponse()
             {
-                Message = _operationsRepository.GetCustomerData(1)
+                Message = await _operationsRepository.GetCustomerData(1)
             }; 
         }
 

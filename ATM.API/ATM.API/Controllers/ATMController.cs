@@ -18,9 +18,9 @@ namespace ATM.API.Web.Controllers
         }
 
         [HttpPost("Withdraw")]
-        public IActionResult WithdrawCash(decimal amount)
+        public async Task<IActionResult> WithdrawCash(decimal amount)
         {
-            var result = _operationsService.WithdrawCash(amount);
+            var result = await _operationsService.WithdrawCash(amount);
             return Ok(result);
         }
 
