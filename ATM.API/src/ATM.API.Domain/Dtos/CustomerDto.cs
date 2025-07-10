@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ATM.API.Domain.Entities
 {
-    public class Customer
+    public class CustomerDto
     {
         public int Id { get; set; }
         public string? DNI { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }
-        public List<BankAccount>? Accounts { get; set; }
+        public List<BankAccountDto>? Accounts { get; set; }
     }
 }
