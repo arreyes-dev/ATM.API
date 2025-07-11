@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Web", "ATM.API\ATM.API.Web.csproj", "{06059E60-CC5B-40E4-968D-9DB33CAD6100}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Web", "src\ATM.API.Web\ATM.API.Web.csproj", "{06059E60-CC5B-40E4-968D-9DB33CAD6100}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Domain", "src\ATM.API.Domain\ATM.API.Domain.csproj", "{F8268696-23E3-460A-9789-C2B4720A8EB0}"
 EndProject
