@@ -8,8 +8,8 @@ namespace ATM.API.Domain.ATM
 {
     public class ATMResponse
     {
-        public string? Status {get;set;}
+        public bool? Success { get;set;}
         public string? Message {get;set;}
-        public string? Balance { get;set;}
+        public decimal? Balance { get;set;}
     }
 }

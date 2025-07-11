@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ATM.API.Application\ATM.API.Application.csproj" />
+    <ProjectReference Include="..\src\ATM.API.Application\ATM.API.Application.csproj" />
     <ProjectReference Include="..\src\ATM.API.Domain\ATM.API.Domain.csproj" />
     <ProjectReference Include="..\src\ATM.API.Infrastructure\ATM.API.Infrastructure.csproj" />
   </ItemGroup>

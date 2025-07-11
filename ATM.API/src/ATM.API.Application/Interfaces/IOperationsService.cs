@@ -10,7 +10,7 @@ namespace ATM.API.Application.Interfaces
     public interface IOperationsService
     {
 
-        public Task<ATMResponse> WithdrawCash(decimal amount);
-        public ATMResponse DepositCash(decimal amount);
+        public Task<ATMResponse> WithdrawCash(decimal amount, int idCustomer);
+        public Task<ATMResponse> DepositCash(decimal amount, int idCustomer);
     }
 }

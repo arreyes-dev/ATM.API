@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Domain", "src\ATM.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Infrastructure", "src\ATM.API.Infrastructure\ATM.API.Infrastructure.csproj", "{89B2305E-8CED-4A58-9CEA-73C81ACABB79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Application", "ATM.API.Application\ATM.API.Application.csproj", "{14779670-6BA1-4C4B-9AF5-D53990338C5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.API.Application", "src\ATM.API.Application\ATM.API.Application.csproj", "{14779670-6BA1-4C4B-9AF5-D53990338C5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

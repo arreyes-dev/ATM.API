@@ -18,16 +18,16 @@ namespace ATM.API.Web.Controllers
         }
 
         [HttpPost("Withdraw")]
-        public async Task<IActionResult> WithdrawCash(decimal amount)
+        public async Task<IActionResult> WithdrawCash(decimal amount, int idCustomer)
         {
-            var result = await _operationsService.WithdrawCash(amount);
+            var result = await _operationsService.WithdrawCash(amount, idCustomer);
             return Ok(result);
         }
 
         [HttpPost("Deposit")]
-        public IActionResult DepositCash(decimal amount)
+        public async Task<IActionResult > DepositCash(decimal amount, int idCustomer)
         {
-            var result = _operationsService.DepositCash(amount);
+            var result = await _operationsService.DepositCash(amount, idCustomer);
             return Ok(result);
         }
     }

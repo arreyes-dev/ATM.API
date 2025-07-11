@@ -10,6 +10,6 @@ namespace ATM.API.Domain.Entities
     {
         public int Id { get; set; }
         public int AccountNumber { get; set; }
-        public int Balance { get; set; }
+        public decimal Balance { get; set; }
     }
 }
